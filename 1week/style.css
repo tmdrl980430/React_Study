@@ -1,0 +1,384 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* css styling 시작 */
+
+:root {
+  /* Color */
+  --white-color: #fff;
+  --black-color: #140a00;
+  --blue-color: #045fd4;
+  --red-color: #ff0000;
+  --gray-dark-color: #909090;
+  --gray-light-color: #e0c0c0;
+
+  /* Size */
+  --padding: 12px;
+  --avatar-size: 36px;
+
+  /* Font Size */
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: white;
+}
+
+body {
+  font-family: Roboto;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+button:focus {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: var(--white-color);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+  background-color: black;
+  color: white;
+  position: sticky;
+  padding: var(--padding);
+  top: 0;
+}
+
+header .logo {
+  font-size: var(--font-large);
+}
+
+header .icons .fa-search {
+  margin-right: var(--padding);
+}
+
+.red_logo {
+  color: red;
+}
+
+.description {
+  padding: var(--padding);
+}
+
+.player video {
+  width: 100%;
+  height: 100%;
+  max-height: 700px;
+}
+
+.player {
+  position: static;
+  top: 0;
+  text-align: center;
+  background-color: var(black);
+}
+
+body > .info {
+  padding: var(--padding);
+}
+
+.description .metadata .hashtag {
+  display: flex;
+  font-size: var(--font-small);
+  color: var(--blue-color);
+}
+
+.description .metadata .hashtag li {
+  margin-right: var(--padding);
+}
+
+.description .metadata .titleAndButton {
+  display: flex;
+}
+
+.description .metadata .titleAndButton .title {
+  font-size: var(--font-medium);
+  /* 2줄 제한 */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin-right: var(--padding);
+}
+
+.description .metadata .titleAndButton .morebutton {
+  height: 100%;
+}
+
+.description .views {
+  font-size: var(--font-small);
+  color: var(--gray-dark-color);
+}
+
+.description .action {
+  display: flex;
+  justify-content: space-around;
+  margin: var(--padding) 0;
+}
+
+.description .action button {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-small);
+}
+
+.description .action button i {
+  margin: 0 auto;
+  margin-bottom: calc(var(--padding) / 2);
+  font-size: 16px;
+  color: var(--gray-dark-color);
+}
+
+.description .action button i.active {
+  color: var(--blue-color);
+}
+
+/* Channel Description */
+.description .channel {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--gray-light-color);
+  border-bottom: 1px solid var(--gray-light-color);
+}
+
+.description .channel .metadata {
+  display: flex;
+  align-items: center;
+}
+
+.description .channel .metadata .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.description .channel .metadata img {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  margin-top: var(--padding);
+  margin-bottom: var(--padding);
+  margin-right: var(--padding);
+  border-radius: 50%;
+}
+
+.description .channel .metadata .info .name {
+  font-size: var(--font-medium);
+}
+
+.description .channel .metadata .info .subscribers {
+  font-size: var(--font-small);
+  color: var(--gray-dark-color);
+}
+
+.description .channel .subscribe {
+  text-transform: uppercase;
+  color: var(--red-color);
+  font-size: var(--font-medium);
+}
+
+.upNext {
+  padding: 0 var(--padding);
+}
+
+.upNext > .title {
+  font-size: var(--font-medium);
+  color: var(--gray-dark-color);
+  margin-bottom: calc(var(--padding) / 2);
+}
+
+.upNext .item {
+  display: flex;
+  margin-top: var(--padding);
+}
+
+.upNext .item .img {
+  flex: 1 1 35%;
+  margin-right: var(--padding);
+}
+
+.upNext .item .img img {
+  width: 100%;
+  height: 70%;
+}
+
+.upNext .item .info {
+  flex: 1 1 60%;
+}
+
+.upNext .item .moreBtn {
+  flex: 1 1 5%;
+  height: 100%;
+}
+
+.upNext .item .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.upNext .item .info .title {
+  font-size: var(--font-small);
+}
+
+.upNext .item .info .name,
+.upNext .item .info .views {
+  font-size: var(--font-micro);
+  color: var(--gray-dark-color);
+}
+
+.infoAndUpNext {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoAndUpNext .description {
+  flex: 1 1 50%;
+}
+
+.infoAndUpNext .upNext {
+  flex: 1 1 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .infoAndUpNext {
+    flex-direction: row;
+    margin: var(—padding) 0;
+  }
+}
