@@ -129,3 +129,162 @@ a {
     color: inherit;
     text-decoration: none;
 }
+
+:root {
+    /* Color */
+    --white-color: #fff;
+    --black-color: #140a00;
+    --blue-color: #045fd4;
+    --red-color: #ff0000;
+    --gray-dark-color: #909090;
+    --gray-light-color: #e0c0c0;
+    --more-info-backgroud-color: #707170;
+  
+    /* Size */
+    --padding: 12px;
+    --avatar-size: 36px;
+  
+    /* Font Size */
+    --font-large: 18px;
+    --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+    --font-microsmall: 1px;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    background-color: var(--black-color);
+  }
+  
+  body {
+    font-family: Roboto;
+  }
+  
+  ul {
+    list-style: none;
+  }
+
+  header {
+    display: flex;
+    position: sticky;
+    justify-content: space-between;
+    color: var(--white-color);
+    align-items: center;   
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  header .logo img {
+    width: 50px;
+  }
+
+  header .logo {
+    display: flex;
+    align-items: center;  
+  }
+
+  header .logo .menu-trigger {
+    display: flex;
+    align-items: center;
+    margin-left: var(--padding);
+}
+
+  header .logo .menu-trigger li {
+    margin-right: var(--padding);
+    font-size: 10px;
+  }
+
+  header .icons {
+    display: flex;
+    align-items: center;
+  }
+
+  header .icons .fa-search {
+    margin-right: var(--padding);
+  }
+
+  header .icons .fa-bell {
+    margin-right: var(--padding);
+  }
+
+  header .icons img{
+    width: 25px;
+    height: 25px;
+    margin-right: var(--padding);
+  }
+
+  .mainView .backgroud_image {
+    position: relative;
+    z-index: 1;
+  }
+
+  .mainView .backgroud_image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .mainView .mainview_info {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    max-width: 33%;
+    margin-top: 100px;
+    margin-left: 50px;
+  }
+
+  .mainView .mainview_info .video_description {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mainView .mainview_info .video_description img {
+    width: fit-content;
+    height: fit-content;
+    max-width: 100%;
+  }
+
+  .mainView .mainview_info .video_description .info {
+    color: var(--white-color);
+    font-size: 1.4vw;
+    margin-top: 30px;
+  }
+
+  .mainView .mainview_info .button {
+      display: flex;
+      color: var(--white-color);
+      margin-top: 30px;
+  }
+
+  .mainView .mainview_info .button .play {
+    width: fit-content;
+    padding: 5px;
+    display: block;
+    color: var(--black-color);
+    background-color: var(--white-color);
+  }
+  
+  
+  .mainView .mainview_info .button .moreinfo {
+    width: 24;
+    height: 24;
+    padding: 5px;
+    display: block;
+    background-color: var(--more-info-backgroud-colorr);
+  }
+
+  .mainView .mainview_info .button .moreinfo button {
+    width: 24;
+    height: 24;
+    background-color: var(--more-info-backgroud-color);
+    color: var(--white-color);
+  }
