@@ -1,134 +1,49 @@
-a,
-abbr,
-acronym,
-address,
-applet,
-article,
-aside,
-audio,
-b,
-big,
-blockquote,
-body,
-canvas,
-caption,
-center,
-cite,
-code,
-dd,
-del,
-details,
-dfn,
-div,
-dl,
-dt,
-em,
-embed,
-fieldset,
-figcaption,
-figure,
-footer,
-form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-header,
-hgroup,
-html,
-i,
-iframe,
-img,
-ins,
-kbd,
-label,
-legend,
-li,
-mark,
-menu,
-nav,
-object,
-ol,
-output,
-p,
-pre,
-q,
-ruby,
-s,
-samp,
-section,
-small,
-span,
-strike,
-strong,
-sub,
-summary,
-sup,
-table,
-tbody,
-td,
-tfoot,
-th,
-thead,
-time,
-tr,
-tt,
-u,
-ul,
-var,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,
+small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,
+aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,
+nav,output,ruby,section,summary,time,mark,audio,video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,
+nav,section {
+  display: block;
 }
 body {
-    line-height: 1;
+  line-height: 1;
 }
 ol,
 ul {
-    list-style: none;
+  list-style: none;
 }
 blockquote,
 q {
-    quotes: none;
+  quotes: none;
 }
-blockquote:after,
 blockquote:before,
-q:after,
-q:before {
-    content: "";
-    content: none;
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 input:focus {
-    outline: none;
+  outline: none;
 }
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
+
 
 :root {
     /* Color */
@@ -141,8 +56,7 @@ a {
     --more-info-backgroud-color: #707170;
   
     /* Size */
-    --padding: 12px;
-    --avatar-size: 36px;
+    --padding: 10px;
   
     /* Font Size */
     --font-large: 18px;
@@ -160,6 +74,7 @@ a {
 
   html {
     background-color: var(--black-color);
+    font-size:1px;
   }
   
   body {
@@ -170,36 +85,51 @@ a {
     list-style: none;
   }
 
+  button,
+  button:focus {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: var(--white-color);
+  }
+
+
   header {
     display: flex;
     position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
     justify-content: space-between;
-    color: var(--white-color);
-    align-items: center;   
+    color: var(--white-color);   
     margin-left: 15px;
     margin-right: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
   }
 
-  header .logo img {
-    width: 50px;
+  header .logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: var(--font-microsmall);
   }
 
-  header .logo {
+  header .logo img {
+    width: 55px;
     display: flex;
     align-items: center;  
   }
 
-  header .logo .menu-trigger {
+  header .menu i {
     display: flex;
     align-items: center;
-    margin-left: var(--padding);
-}
+    margin-left: 10px;
+  }
 
-  header .logo .menu-trigger li {
+  header .menu i {
     margin-right: var(--padding);
-    font-size: 10px;
+    font-size: 1px;
   }
 
   header .icons {
@@ -216,10 +146,14 @@ a {
   }
 
   header .icons img{
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     margin-right: var(--padding);
   }
+/* 
+  .mainView {
+    position: absolute;
+  } */
 
   .mainView .backgroud_image {
     position: relative;
@@ -238,8 +172,8 @@ a {
     top: 0;
     left: 0;
     max-width: 33%;
-    margin-top: 100px;
-    margin-left: 50px;
+    margin-top: 10%;
+    margin-left: 20px;
   }
 
   .mainView .mainview_info .video_description {
@@ -255,36 +189,165 @@ a {
 
   .mainView .mainview_info .video_description .info {
     color: var(--white-color);
-    font-size: 1.4vw;
-    margin-top: 30px;
+    font-size: 1.4px;
+    margin-top: 15px;
   }
 
-  .mainView .mainview_info .button {
+  .mainView .mainview_info .videobutton {
       display: flex;
       color: var(--white-color);
-      margin-top: 30px;
+      margin-top: 15px;
   }
 
-  .mainView .mainview_info .button .play {
+  .mainView .mainview_info .videobutton .play {
     width: fit-content;
     padding: 5px;
-    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
     color: var(--black-color);
     background-color: var(--white-color);
-  }
-  
-  
-  .mainView .mainview_info .button .moreinfo {
-    width: 24;
-    height: 24;
-    padding: 5px;
-    display: block;
-    background-color: var(--more-info-backgroud-colorr);
+    border-radius: 5px;
   }
 
-  .mainView .mainview_info .button .moreinfo button {
-    width: 24;
-    height: 24;
-    background-color: var(--more-info-backgroud-color);
+  .mainView .mainview_info .videobutton .play .playtxt {
+    margin-left: 5px;
+    font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    display: block;
+    font-size: 1.6px;
+    font-weight: bold;
+  }
+  
+  .mainView .mainview_info .videobutton .moreinfo {
+    width: fit-content;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(170, 170, 170, .4);
+    border-radius: 5px;
+  }
+
+  .mainView .mainview_info .videobutton .moreinfo .moreinfobtn {
+    background-color: rgba(170, 170, 170, .4);
     color: var(--white-color);
+  }
+
+  .mainView .mainview_info .videobutton .moreinfo .moreinfotxt {
+    font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    display: block;
+    font-size: 1.6px;
+    font-weight: bold;
+    margin-left: 5px;
+  }
+
+  .mainView .mainview_info .koreadrama {
+    position: relative;
+    z-index: 10;
+    margin-top: 80px;
+  }
+
+  .mainView .mainview_info .koreadrama .txt {
+    color: var(--white-color);
+    font-weight: 900;
+    font-size: var(--font-micro);
+  }
+
+  .mainView .mainview_info .koreadrama .koreadramaimage {
+    display: flex;
+    margin-top: 10px;
+  }
+
+  .mainView .mainview_info .koreadrama .koreadramaimage img:hover {
+    transform: scale(2);
+    transition: 1s;
+  }
+
+  .mainView .mainview_info .koreadrama .koreadramaimage img {
+    max-width: 47%;
+    border-radius: 1px;
+    padding: 1px;
+  }
+
+  .mainView .mainview_info .newcontents {
+    margin-top: 15px;
+  }
+
+  .mainView .mainview_info .newcontents .txt {
+    color: var(--white-color);
+    font-weight: 900;
+    font-size: var(--font-micro);
+  }
+
+  .mainView .mainview_info .newcontents .newcontentsimage {
+    display: flex;
+    margin-top: 10px;
+  }
+
+  .mainView .mainview_info .newcontents .newcontentsimage img:hover {
+    transform: scale(2);
+    transition: 1s;
+  }
+
+  .mainView .mainview_info .newcontents .newcontentsimage img {
+    max-width: 47%;
+    border-radius: 1px;
+    padding: 1px;
+  }
+
+  .mainView .mainview_info .koreamovie {
+    margin-top: 15px;
+  }
+
+  .mainView .mainview_info .koreamovie .txt {
+    color: var(--white-color);
+    font-weight: 900;
+    font-size: var(--font-micro);
+  }
+
+  .mainView .mainview_info .koreamovie .koreamovieimage {
+    display: flex;
+    margin-top: 10px;
+  }
+
+  .mainView .mainview_info .koreamovie .koreamovieimage img:hover {
+    transform: scale(2);
+    transition: 1s;
+  }
+
+  .mainView .mainview_info .koreamovie .koreamovieimage img {
+    max-width: 47%;
+    border-radius: 1px;
+    padding: 1px;
+  }
+
+  .mainView .mainview_info .usaseries {
+    margin-top: 15px;
+  }
+
+  .mainView .mainview_info .usaseries .txt {
+    color: var(--white-color);
+    font-weight: 900;
+    font-size: var(--font-micro);
+  }
+
+  .mainView .mainview_info .usaseries .usaseriesimage {
+    display: flex;
+    margin-top: 10px;
+  }
+
+  .mainView .mainview_info .usaseries .usaseriesimage img:hover {
+    transform: scale(2);
+    transition: 1s;
+  }
+
+  .mainView .mainview_info .usaseries .usaseriesimage img {
+    max-width: 47%;
+    border-radius: 1px;
+    padding: 1px;
   }
