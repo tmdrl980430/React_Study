@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 const App = () => {
     //State는 절대 직접적으로 수정하지 않는다.
@@ -25,6 +25,7 @@ const App = () => {
             <ul>
                 {toDos.map((item , index) => <li key={index}>{item}</li>)}
             </ul>
+
         </div>
     )
 }
