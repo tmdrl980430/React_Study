@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Movie from "../components/Movie";
-import PropTypes from "prop-types";
 
 const Home = () => {
     const [loading, setLoading] = useState(true);
@@ -18,31 +17,21 @@ const Home = () => {
 
     return (
         <div>
-            {
-                loading
-                    ? <h1>Loading....</h1>
-                    : <div>{
-                        movies.map((movie) => (
-                            <Movie 
-                            key={movie.id}
-                            coverImg={movie.medium_cover_image} 
-                            title={movie.title} 
-                            summary={movie.summary} 
-                            genres={movie.genres}
+            {loading ? <h1>Loading....</h1> : <div>
+                        {movies.map((movie) => (
+                            <Movie
+                                key={movie.id}
+                                coverImg={movie.medium_cover_image}
+                                title={movie.title}
+                                summary={movie.summary}
+                                genres={movie.genres}
                             />
-                        ))
-                    }
+                        ))}
                     </div>
             }
         </div>
     );
 }
 
-Movie.prototype = {
-    coverImg : PropTypes.string.isRequired,
-    title : PropTypes.string.isRequired,
-    summary: PropTypes.string.isRequired,
-    genres: PropTypes.arrayOf(PropTypes.string).isRequired
-};
 
 export default Home;
