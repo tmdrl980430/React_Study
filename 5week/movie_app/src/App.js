@@ -7,7 +7,7 @@ const App = () => {
     return (
     <Router>
         <Routes>
-            <Route exact path="/movie" element={<Detail/> }/>
+            <Route exact path="/movie/:id" element={<Detail/> }/>
         </Routes>
         <Routes>
             <Route exact path="/" element={<Home/>} />
